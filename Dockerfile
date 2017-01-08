@@ -2,8 +2,9 @@ FROM node:4.6.0
 
 USER root
 
+RUN dpkg --add-architecture i386
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends tree nsis wine xauth
+RUN apt-get install -y --no-install-recommends tree nsis wine wine32 xauth
 RUN apt-get clean
 
 # first create user and group for all the X Window stuff
