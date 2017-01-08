@@ -7,6 +7,7 @@ RUN apt-get -y install tree nsis wine
 RUN apt-get clean
 
 # Wine really doesn't like to be run as root, so let's use a non-root user
+RUN useradd -ms /bin/bash xclient
 USER xclient
 ENV HOME /home/xclient
 ENV WINEPREFIX /home/xclient/.wine
