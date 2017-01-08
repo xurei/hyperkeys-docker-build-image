@@ -10,7 +10,6 @@ RUN apt-get clean
 USER xclient
 ENV HOME /home/xclient
 ENV WINEPREFIX /home/xclient/.wine
-
 ENV WINEARCH win32
 RUN wine wineboot --init
 
