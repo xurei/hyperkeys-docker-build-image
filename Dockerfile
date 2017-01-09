@@ -26,7 +26,6 @@ COPY docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 # During startup we need to prepare connection to X11-Server container
-USER xclient
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Wine really doesn't like to be run as root, so let's use a non-root user
