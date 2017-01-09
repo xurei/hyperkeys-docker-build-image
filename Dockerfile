@@ -4,7 +4,7 @@ USER root
 
 RUN dpkg --add-architecture i386
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends tree nsis wine wine32 xauth
+RUN apt-get install -y --no-install-recommends tree nsis wine wine32 xauth g++
 RUN apt-get clean
 
 # first create user and group for all the X Window stuff
@@ -35,5 +35,3 @@ RUN wine wineboot --init
 
 # Use xclient's home dir as working dir
 WORKDIR /home/xclient
-
-USER root
