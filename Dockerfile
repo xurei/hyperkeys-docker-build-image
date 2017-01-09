@@ -35,3 +35,5 @@ RUN wine wineboot --init
 
 # Use xclient's home dir as working dir
 WORKDIR /home/xclient
+
+USER root
