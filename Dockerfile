@@ -4,7 +4,7 @@ USER root
 
 RUN dpkg --add-architecture i386
 RUN apt-get update
-RUN apt-get install -y --no-install-recommends tree nsis wine wine32 xauth g++
+RUN apt-get install -y --no-install-recommends tree nsis wine wine32 xauth g++ g++-mingw-w64-i686
 RUN apt-get clean
 
 # first create user and group for all the X Window stuff
