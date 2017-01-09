@@ -25,6 +25,8 @@ RUN usermod -a -G root xclient
 COPY docker-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
+RUN chown root:root /home/xclient
+
 # During startup we need to prepare connection to X11-Server container
 ENTRYPOINT ["/entrypoint.sh"]
 
